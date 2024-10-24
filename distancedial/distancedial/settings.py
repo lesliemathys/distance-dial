@@ -37,7 +37,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # My apps
-
+    'users',
 
     # Third-party
     'django_htmx',
