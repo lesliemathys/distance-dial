@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     # My apps
     'users',
     'clubs',
+    'sessions',
 
     # Third-party
     'django_htmx',
