@@ -54,7 +54,7 @@ class Club(models.Model):
         (NINE_IRON, '9 Iron'),
         
         # Wedges
-        (PITCHING_WEDGE, 'Pitching Wedge (46°)'),
+        (PITCHING_WEDGE, 'Pitching Wedge'),
         (GAP_WEDGE_50, '50° Wedge'),
         (GAP_WEDGE_52, '52° Wedge'),
         (SAND_WEDGE_54, '54° Wedge'),
@@ -74,10 +74,12 @@ class Club(models.Model):
     ]
 
     club_type = models.CharField(max_length=2, choices=CLUB_CHOICES)
+    def __str__(self):
+        return dict(self.CLUB_CHOICES).get(self.club_type, self.club_type)
 
 class Bag(models.Model):
     user = models.ForeignKey('users.User', on_delete=models.CASCADE)
     clubs = models.ManyToManyField(Club)
 
     def __str__(self):
-        return f"{self.user.username}'s Bag"
+        return f"{self.user.email}'s Bag"
