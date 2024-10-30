@@ -8,7 +8,7 @@ class Session(models.Model):
     session_notes = models.TextField(blank=True)
 
     def __str__(self):
-        return f"{self.user.username}'s session on {self.session_datetime}"
+        return f"{self.user.email}'s session on {self.session_datetime}"
 
 class Shot(models.Model):
     session = models.ForeignKey(Session, on_delete=models.CASCADE)

@@ -3,7 +3,7 @@ from .models import Club
 from .models import Bag
 
 # Register your models here.
-admin.site.register(Club)
+@admin.register(Club)
 class ClubAdmin(admin.ModelAdmin):
     list_display = ('get_club_name', 'club_type')
     list_filter = ('club_type',)
