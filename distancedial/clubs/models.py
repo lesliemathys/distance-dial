@@ -1,4 +1,5 @@
 from django.db import models
+from core.models import SoftDeleteModel
 
 class Club(models.Model):
     # Woods
@@ -74,10 +75,11 @@ class Club(models.Model):
     ]
 
     club_type = models.CharField(max_length=2, choices=CLUB_CHOICES)
+    
     def __str__(self):
         return dict(self.CLUB_CHOICES).get(self.club_type, self.club_type)
 
-class Bag(models.Model):
+class Bag(SoftDeleteModel):
     user = models.ForeignKey('users.User', on_delete=models.CASCADE)
     clubs = models.ManyToManyField(Club)
 
