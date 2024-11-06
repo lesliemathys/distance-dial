@@ -15,7 +15,7 @@ class ClubAdmin(admin.ModelAdmin):
         return dict(Club.CLUB_CHOICES).get(obj.club_type)
     get_club_name.short_description = 'Club Name'
 
-admin.site.register(Bag)
+@admin.register(Bag)
 class BagAdmin(admin.ModelAdmin):
     list_display = ('user', 'get_club_count', 'is_deleted')
     list_filter = ('is_deleted',)
