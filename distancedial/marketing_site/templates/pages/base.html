@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +7,14 @@
 
     <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon-32x32.png' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <title>Distance Dial</title>
 </head>
 <body>
     
-    
+    {% include 'partials/nav.html' %}
+    {% block content %}{% endblock %}
 
 </body>
 </html>

@@ -1,2 +1,116 @@
 @import 'root.css';
 
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Navigation container */
+.site-header {
+    background-color: var(--color-surface-50);
+    border-bottom: 1px solid var(--color-surface-200);
+    padding: var(--space-2) 0;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--container-default);
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+}
+
+/* Logo section */
+.main-nav__brand {
+    flex-shrink: 0;
+}
+
+.main-nav__logo {
+    display: block;
+    font-size: var(--text-heading);
+    font-weight: 600;
+    color: var(--color-neutral-900);
+    text-decoration: none;
+}
+
+/* Main menu */
+.main-nav__menu {
+    display: flex;
+    gap: var(--space-4);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav__item {
+    margin: 0;
+}
+
+.main-nav__link {
+    color: var(--color-neutral-700);
+    text-decoration: none;
+    font-size: var(--text-body);
+    font-weight: 500;
+    padding: var(--space-1) 0;
+    transition: color 0.2s ease;
+}
+
+.main-nav__link:hover {
+    color: var(--color-primary-600);
+}
+
+/* Auth buttons */
+.main-nav__auth {
+    display: flex;
+    gap: var(--space-2);
+    align-items: center;
+}
+
+.main-nav__button {
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-md);
+    font-size: var(--text-body);
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.main-nav__button {
+    color: var(--color-neutral-700);
+}
+
+.main-nav__button:hover {
+    color: var(--color-primary-600);
+}
+
+.main-nav__button--primary {
+    background-color: var(--color-primary-600);
+    color: var(--color-surface-50);
+}
+
+.main-nav__button--primary:hover {
+    background-color: var(--color-primary-700);
+    color: var(--color-surface-50);
+}
+
+/* Utility class for screen readers */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: var(--breakpoint-md)) {
+    .main-nav__menu {
+        display: none; /* We'll handle mobile menu separately */
+    }
+}
