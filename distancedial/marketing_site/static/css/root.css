@@ -1,0 +1,123 @@
+/* Font declarations */
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/inter-v18-latin-regular.woff2') format('woff2'),
+         url('../fonts/inter-v18-latin-regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/inter-v18-latin-500.woff2') format('woff2'),
+         url('../fonts/inter-v18-latin-500.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/inter-v18-latin-600.woff2') format('woff2'),
+         url('../fonts/inter-v18-latin-600.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/inter-v18-latin-700.woff2') format('woff2'),
+         url('../fonts/inter-v18-latin-700.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    /* Primary brand colors */
+    --color-primary-950: #022601;  /* Darkest green - main brand color */
+    --color-primary-900: #033c02;
+    --color-primary-800: #066803;
+    --color-primary-700: #099a04;
+    --color-primary-600: #0cc705;
+    --color-primary-500: #0ef406;
+    --color-primary-400: #35fa2e;
+    --color-primary-300: #65fb60;
+    --color-primary-200: #90fc8d;
+    --color-primary-100: #bcfdb9;
+    --color-primary-50: #d4fed2;
+  
+    /* Surface/Background colors */
+    --color-surface-950: #0d120e;
+    --color-surface-900: #1a231d;
+    --color-surface-800: #34473a;
+    --color-surface-700: #4d6a57;
+    --color-surface-600: #678e74;
+    --color-surface-500: #89a994;
+    --color-surface-400: #acc3b4;
+    --color-surface-300: #d0ddd4;
+    --color-surface-200: #f4f7f5;  /* Main background color */
+    --color-surface-100: #f9fbfa;
+    --color-surface-50: #fcfdfc;
+  
+    /* Neutral/Grey colors */
+    --color-neutral-950: #151918;
+    --color-neutral-900: #2c3331;  /* Main text color */
+    --color-neutral-800: #424d4a;
+    --color-neutral-700: #576561;
+    --color-neutral-600: #6d7e79;
+    --color-neutral-500: #849590;
+    --color-neutral-400: #9caaa6;
+    --color-neutral-300: #b5bfbc;
+    --color-neutral-200: #ced4d3;
+    --color-neutral-100: #e6eae9;
+    --color-neutral-50: #f1f3f3;
+
+    /* Typography */
+    --font-family: 'Inter', sans-serif;
+    
+    /* Font sizes - using a more conventional scale */
+    --text-hero: 3rem;          /* 48px - Hero/main headline */
+    --text-heading: 2rem;       /* 32px - Section headings */
+    --text-subheading: 1.5rem;  /* 24px - Smaller headings */
+    --text-body: 1rem;          /* 16px - Body text */
+    --text-small: 0.875rem;     /* 14px - Small text/captions */
+
+    /* Line heights */
+    --leading-tight: 1.2;     /* Headings */
+    --leading-normal: 1.5;    /* Body text */
+    --leading-loose: 1.7;     /* Larger text blocks */
+
+    /* Simple typography utilities */
+    .text-hero {
+    font-size: var(--text-hero);
+    line-height: var(--leading-tight);
+    font-weight: 700;
+    }
+
+    .text-heading {
+    font-size: var(--text-heading);
+    line-height: var(--leading-tight);
+    font-weight: 600;
+    }
+
+    .text-subheading {
+    font-size: var(--text-subheading);
+    line-height: var(--leading-normal);
+    font-weight: 500;
+    }
+
+    .text-body {
+    font-size: var(--text-body);
+    line-height: var(--leading-normal);
+    font-weight: 400;
+    }
+
+    .text-small {
+    font-size: var(--text-small);
+    line-height: var(--leading-normal);
+    font-weight: 400;
+    }
+}
