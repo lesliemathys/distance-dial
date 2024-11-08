@@ -90,6 +90,36 @@
     --leading-normal: 1.5;    /* Body text */
     --leading-loose: 1.7;     /* Larger text blocks */
 
+    /* Breakpoints */
+    --breakpoint-sm: 490px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1040px;
+    --breakpoint-max: 1280px;
+
+    --space-1: 0.5rem;    /* 8px */
+    --space-2: 1rem;      /* 16px */
+    --space-3: 1.5rem;    /* 24px */
+    --space-4: 2rem;      /* 32px */
+    --space-5: 2.5rem;    /* 40px */
+    --space-6: 3rem;      /* 48px */
+    --space-7: 3.5rem;    /* 56px */
+    --space-8: 4rem;      /* 64px */
+    
+    /* Container widths */
+    --container-narrow: 40rem;    /* 640px */
+    --container-default: 60rem;   /* 960px */
+    --container-wide: 80rem;      /* 1280px */
+    
+    /* Border radius */
+    --radius-sm: 0.25rem;   /* 4px */
+    --radius-md: 0.5rem;    /* 8px */
+    --radius-lg: 1rem;      /* 16px */
+    
+    /* Box shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.05);
+
     /* Simple typography utilities */
     .text-hero {
     font-size: var(--text-hero);
@@ -119,5 +149,39 @@
     font-size: var(--text-small);
     line-height: var(--leading-normal);
     font-weight: 400;
+    }
+
+}
+
+/* Container styles */
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+}
+
+@media (min-width: 490px) {
+    .container {
+        max-width: var(--breakpoint-sm); /* 490px */
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: var(--breakpoint-md); /* 768px */
+    }
+}
+
+@media (min-width: 1040px) {
+    .container {
+        max-width: var(--breakpoint-lg); /* 1040px */
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: var(--breakpoint-max); /* 1280px */
     }
 }
