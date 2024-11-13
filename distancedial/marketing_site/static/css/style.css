@@ -1,5 +1,54 @@
-@import 'root.css';
+@import './root.css';
+@import './reset.css';
+
 
 body {
     font-family: 'Inter', sans-serif;
+}
+
+/* --- nav section --- */
+.navbar, 
+.navbar__logo-container,
+.navbar__nav-links,
+.navbar__cta-links  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.navbar {
+    padding: 1rem 0;
+    background-color: var(--color-surface-100);
+    box-shadow: var(--shadow-sm); 
+}
+
+.navbar__nav-item { 
+    list-style: none;
+    text-decoration: none;
+    margin-right: var(--spacing-4);
+}
+
+.navbar__nav-item:last-child {
+    margin-right: 0;
+}
+
+.navbar__nav-item a {
+    color: var(--color-neutral-900);
+    text-decoration: none;
+}
+
+/* --- hero section --- */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding-top: var(--spacing-4);
+    padding-bottom: var(--spacing-4);
+    align-items: center;
+}
+
+.hero__title,
+.hero__subtitle {
+    color: var(--color-neutral-900);
 }
