@@ -13,39 +13,50 @@
 </head>
 <body>
     
-    <nav class="navbar">
-        <div class="navbar__logo-container">
-            <a href="/">
-                <img class="navbar__logo" src="{% static 'img/logo_wordmark.svg' %}" alt="Distance Dial logo" width="136" height="30">
-            </a>
-        </div>
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar__logo-container">
+                <a href="/">
+                    <img class="navbar__logo" src="{% static 'img/logo_wordmark.svg' %}" alt="Distance Dial logo" width="136" height="30">
+                </a>
+            </div>
+            
+            <ul class="navbar__nav-links">
+                <li class="navbar__nav-item"><a href="#features" class="navbar__link">Features</a></li>
+                <li class="navbar__nav-item"><a href="#how" class="navbar__link">How It Works</a></li>
+                <li class="navbar__nav-item"><a href="#pricing" class="navbar__link">Pricing</a></li>
+                <li class="navbar__nav-item"><a href="#faq" class="navbar__link">FAQs</a></li>
+            </ul>
         
-        <ul class="navbar__nav-links">
-            <li class="navbar__nav-item"><a href="#" class="navbar__link">How It Works</a></li>
-            <li class="navbar__nav-item"><a href="#" class="navbar__link">Features</a></li>
-            <li class="navbar__nav-item"><a href="#" class="navbar__link">Pricing</a></li>
-        </ul>
+            <ul class="navbar__cta-links">
+                <li class="navbar__nav-item"><a href="#" class="navbar__link">Login</a></li>
+                <li class="navbar__nav-item"><a href="#" class="navbar__link navbar__link--cta">Buy Now</a></li>
+            </ul>
+        </nav>
+    </header>    
+
+    <section class="hero">
+        <div class="hero__text-container">
+            <h2 class="hero__title text-hero">Lower Scores Start With Knowing Your Numbers</h2>
+            <h4 class="hero__subtitle text-subheading">Track your true club distances.<br>Make confident decisions.<br>Watch your scores drop.</h4>
+        </div>
+        <div class="hero__image-container">
+            <img class="hero__image" src="{% static 'img/logo.svg' %}" alt="Distance Dial logo" width="1360" height="300">
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="features__container"></div>
+    </section>
     
-        <ul class="navbar__cta-links">
-            <li class="navbar__nav-item"><a href="#" class="navbar__link">Login</a></li>
-            <li class="navbar__nav-item"><a href="#" class="navbar__link navbar__link--cta">Buy Now</a></li>
-        </ul>
-</nav>
+    <section class="works" id="works"></section>
+        
+    <section class="pricing" id="pricing"></section>
+    
+    <section class="faq" id="faq"></section>
+    
+    <footer class="footer"></footer>
 
-<section class="hero">
-    <div class="hero__text-container">
-        <h2 class="hero__title text-hero">Lower Scores Start With Knowing Your Numbers</h2>
-        <h4 class="hero__subtitle text-subheading">Track your true club distances.<br>Make confident decisions.<br>Watch your scores drop.</h4>
-    </div>
-    <div class="hero__image-container">
-        <img class="hero__image" src="{% static 'img/logo.svg' %}" alt="Distance Dial logo" width="1360" height="300">
-    </div>
-</section>
-
-<section class="features">
-    <div class="features__container">
-    </div>
-</section>
     
 </body>
 </html>
